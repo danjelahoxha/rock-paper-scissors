@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "radial-gradient":
-          "radial-gradient(circle at top, rgb(45,55,85) 0%, rgb(30,30,60) 100%);",
+          "radial-gradient(circle at top, rgb(45,55,80) 0%, rgb(30,30,50) 100%);",
       },
     },
   },

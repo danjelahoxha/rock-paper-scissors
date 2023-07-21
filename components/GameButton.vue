@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" @click="play">
+  <button class="btn" :class="option.value" @click="play">
     <img :src="option.iconUrl" alt="" class="w-12 h-12" />
   </button>
 </template>
@@ -23,7 +23,43 @@ export default {
 
 <style scoped>
 .btn {
-  @apply w-24 h-24 text-white rounded-full flex items-center justify-center text-center;
+  @apply w-32 h-32 text-white rounded-full flex items-center justify-center text-center;
+
+  -webkit-box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: #008cba;
+
+  transition: all 0.3s ease 0s;
+  position: relative;
+  overflow: hidden;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(0.2px);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+  -webkit-box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .rock {
